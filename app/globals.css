@@ -2,32 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  background-color: #101114;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #15171c;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #222429;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.glassmorphism-auth {
+  background: rgba(6, 3, 3, 0.711);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.glassmorphism-black {
+  background: rgba(18, 18, 18, 0.64);
+  backdrop-filter: blur(37px);
+  -webkit-backdrop-filter: blur(37px);
+}
+
+.cl-socialButtonsIconButton {
+  border: 2px solid #222429;
+}
+.cl-button {
+  color: white;
+}
+.cl-socialButtonsProviderIcon__github {
+  filter: invert(1);
+}
+.cl-internal-b3fm6y {
+  background: #f97535;
+}
+.cl-formButtonPrimary {
+  background: #f97535;
+}
+.cl-footerActionLink {
+  color: #f97535;
+}
+.cl-headerSubtitle {
+  color: #c5d0e6;
+}
+.cl-logoImage {
+  width: 10rem;
+  height: 3rem;
+}
+.cl-internal-4a7e9l {
+  color: white;
+}
+
+.cl-userButtonPopoverActionButtonIcon {
+  color: white;
+}
+.cl-internal-wkkub3 {
+  color: #f97535;
 }
