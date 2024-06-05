@@ -15,6 +15,10 @@ const nextConfig = {
         },
         {
           protocol: 'https',
+          hostname: 'brainy-wren-43.convex.cloud'
+        },
+        {
+          protocol: 'https',
           hostname: 'img.clerk.com'
         },
       ]

@@ -1,4 +1,6 @@
 import LeftSidebar from '@/components/left-sidebar'
+import MobileNav from '@/components/mobile-nav'
+import PodcastPlayer from '@/components/podcast-player'
 import RightSidebar from '@/components/right-sidebar'
 import { Toaster } from '@/components/ui/toaster'
 import Image from 'next/image'
@@ -16,8 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Image src="/icons/logo.svg" alt="menu icon"
                 width={30} height={30}
               />
-              {/* <MobileNav /> */}
-              <p>MobileNav</p>
+              <MobileNav />
             </div>
             <div className="flex flex-col md:pb-14">
               <Toaster />
@@ -30,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RightSidebar />
       </main>
 
-      {/* <PodcastPlayer /> */}
+      <PodcastPlayer />
     </div>
   )
 }

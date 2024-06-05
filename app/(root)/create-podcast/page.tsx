@@ -42,7 +42,7 @@ export default function CreatePodCastPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  // const createPodcast = useMutation(api.podcasts.createPodcast)
+  const createPodcast = useMutation(api.podcasts.createPodcast)
 
   const { toast } = useToast()
 
@@ -65,26 +65,26 @@ export default function CreatePodCastPage() {
         throw new Error('Please generate audio and image')
       }
 
-      // const podcast = await createPodcast({
-      //   podcastTitle: data.podcastTitle,
-      //   podcastDescription: data.podcastDescription,
-      //   audioUrl,
-      //   imageUrl,
-      //   voiceType,
-      //   imagePrompt,
-      //   voicePrompt,
-      //   views: 0,
-      //   audioDuration,
-      //   audioStorageId: audioStorageId!,
-      //   imageStorageId: imageStorageId!,
-      // })
+      const podcast = await createPodcast({
+        podcastTitle: data.podcastTitle,
+        podcastDescription: data.podcastDescription,
+        audioUrl,
+        imageUrl,
+        voiceType,
+        imagePrompt,
+        voicePrompt,
+        views: 0,
+        audioDuration,
+        audioStorageId: audioStorageId!,
+        imageStorageId: imageStorageId!,
+      })
 
       toast({ title: 'Podcast created' })
 
       setIsSubmitting(false)
       router.push('/')
     } catch (error) {
-      console.log(error)
+      console.log('create-podcast-page, onSubmit', error)
       toast({
         title: 'Error',
         variant: 'destructive',

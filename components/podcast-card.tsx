@@ -1,3 +1,4 @@
+import { Id } from '@/convex/_generated/dataModel';
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import React from 'react'
@@ -6,8 +7,7 @@ type Props = {
     imgUrl: string
     title: string
     description: string
-    // podcastId: Id<"podcasts">
-    podcastId: number
+    podcastId: Id<"podcasts">
 }
 
 export default function PodcastCard({ imgUrl, title, description, podcastId }: Props) {
